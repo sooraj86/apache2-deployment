@@ -1,12 +1,17 @@
 # coding: UTF-8
 # Cookbook Name:: apache2
 # Recipe:: default
-node['apache']['packages'].each do |pkg|
-  package pkg do
-    action :install
-    retries 2
-    retry_delay 5
-  end
+
+package "apache2" do
+  action :install
+end
+
+package "apache2-doc" do
+  action :install
+end
+
+package "apache2-utils" do
+  action :install
 end
 
 cookbook_file "/var/www/html/index.html" do
