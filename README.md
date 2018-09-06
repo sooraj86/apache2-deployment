@@ -1,2 +1,2 @@
 # apache2-deployment
-for deploying apache2
+for deploying apache2 through jenkins
